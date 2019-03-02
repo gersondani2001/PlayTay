@@ -1,0 +1,57 @@
+<ion-view class="view">
+	<ion-content >
+		<!--link de enlace de css del login-->
+		<link rel="stylesheet" href="css/login.css">
+		<!--titulo del login-->
+		<div class="container cont1">
+			<div class="row">
+				<div class="col">
+					<h5 class="styh5 uno">System Uno Login de PlayTay</h5>
+				</div>
+			</div>
+			<!--img del login representante uno-->
+			<div class="row">
+				<div class="col uno espacio">
+					<img src="../img/uno.png" alt="unosystem" >
+				</div>
+			</div>
+			<!--interncional-->
+			<div class="row">
+				<div class="col uno">
+					<!--sty significa stylos de cada etiqueta-->
+					<p class="styp">Internacional inc. Company</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<form>
+						<label class="styla">Usuario:</label>
+						<input type="text" placeholder="  El usurio registrado..." class="styin" ng-model="usuario.name">
+						<label class="styla">Contraseña:</label>
+						<input type="password" placeholder="  La contraseña..." class="styin"
+						ng-model="usuario.pass">
+						<div class="row">
+							<div class="col uno">
+								<button class="button button-calm stybo " ng-click="func(usuario)">
+								  	Entrar.
+								</button>							
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col uno">
+								<a ui-sref="registro">Registrate en PlayTay.</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+
+	</ion-content>
+</ion-view>

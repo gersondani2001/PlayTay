@@ -1,0 +1,26 @@
+/*codigo de css3 para inicio*/
+.tabs-top > .tabs{
+	top: initial !important;
+}
+h1{
+	font-family: cursive;
+	font-weight: bolder;
+	font-style: none;
+	font-size: 20px !important;
+	text-align: center;
+	padding: 2% 0 !important;
+	color:#51eaea;
+}
+.center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pp{
+	font-family: black arial;
+	font-weight: bolder;
+	font-style: none;
+	font-size: 015px !important;
+	text-align: center;	
+	padding: 0px 15px;
+}

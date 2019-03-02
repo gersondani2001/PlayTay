@@ -1,0 +1,68 @@
+<ion-view>
+	<ion-content>
+		<link rel="stylesheet" href="../css/registro.css">
+		<form>
+	      
+	        <h1 class="styh1">Registrate en PlayTay</h1>
+
+	        
+	        <fieldset>
+	          <legend><span class="number">1</span>Tu info para el registro.</legend>
+	          <label for="name">Name:</label>
+	          <input type="text" id="name" name="user_name" ng-model="reg.user">
+	          
+	          <label for="mail">Email:</label>
+	          <input type="email" id="mail" name="user_email" ng-model="reg.email">
+	          
+	          <label for="password">Password:</label>
+	          <input type="password" id="password" name="user_password" ng-model="reg.password">
+	          
+	        </fieldset>
+	        
+	        <fieldset>
+	          <legend><span class="number">2</span>Your profile</legend>
+	          <label for="bio">Biography:</label>
+	          <textarea id="bio" name="user_bio" ng-model="reg.bio"></textarea>
+	        </fieldset>
+	        <fieldset>
+	        <label for="job">Job Role:</label>
+	        <select id="job" name="user_job" ng-model="reg.info">
+	          <optgroup label="Web">
+	            <option value="frontend_developer">Front-End Developer</option>
+	            <option value="php_developor">PHP Developer</option>
+	            <option value="python_developer">Python Developer</option>
+	            <option value="rails_developer"> Rails Developer</option>
+	            <option value="web_designer">Web Designer</option>
+	            <option value="WordPress_developer">WordPress Developer</option>
+	          </optgroup>
+	          <optgroup label="Mobile">
+	            <option value="Android_developer">Androild Developer</option>
+	            <option value="iOS_developer">iOS Developer</option>
+	            <option value="mobile_designer">Mobile Designer</option>
+	          </optgroup>
+	          <optgroup label="Business">
+	            <option value="business_owner">Business Owner</option>
+	            <option value="freelancer">Freelancer</option>
+	          </optgroup>
+	          <optgroup label="Other">
+	            <option value="secretary">Secretary</option>
+	            <option value="maintenance">Maintenance</option>
+	          </optgroup>
+	        </select>
+	        
+	          <label>Interests:</label>
+	          <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development" ng-model="reg.deve">Development</label><br>
+	            <input type="checkbox" id="design" value="interest_design" name="user_interest" ng-model="reg.design"><label class="light" for="design">Design</label><br>
+	          <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business" ng-model="reg.business">Tabla</label>
+       
+	        </fieldset>
+	        <button class="button button-energized" ng-click="func2(reg)">Sign Up</button>
+	      </form>
+
+
+
+	      <button class="button button-energized" ui-sref="login">
+			    regresar a acceder.
+			</button>
+	</ion-content>
+</ion-view>

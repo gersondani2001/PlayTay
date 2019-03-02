@@ -1,0 +1,44 @@
+/*codigo de css para login*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+/*para center contenido*/
+.uno{
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+/*estilos del h5*/
+.styh5{
+	font-family: 'Black Han Sans', sans-serif;
+	color:#65c6c4; 
+	font-size:15px;
+	padding: 0 !important;
+}
+/*espacio del de la img*/
+.espacio{
+	padding: 0 !important;
+}
+/*estylos del etiquepa p*/
+.styp{
+	color: #6927ff;
+}
+/*stilos del label*/
+.styla{
+	margin-left: 10% !important;
+	font-family: 'Staatliches', cursive;
+
+}
+/*estilos del in*/
+.styin{
+	margin-left:10%;
+	border: 1px solid #65c6c4 !important;
+	width: 80%;
+}
+/*estilos del contener 1*/
+.view{
+	background: #738598 !important;
+}
+/*estilos de etiqueta a*/
