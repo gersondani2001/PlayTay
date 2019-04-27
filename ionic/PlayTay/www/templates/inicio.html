@@ -1,8 +1,6 @@
 <ion-view name="tab-inicio">
 	<ion-content>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-				<link rel="stylesheet" href="../css/inicio.css">
+		<link rel="stylesheet" href="../css/inicio.css">
 		<ion-header>
 			<h1>Bienvenido Taytay...</h1>
 		</ion-header>
@@ -13,24 +11,23 @@
 		</p>
 
 
+<input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+
+<button ng-click="img()">Cargar Img.</button>
 
 
 
-			<ion-tabs >
-			  <!-- Dashboard Tab -->
-			  <ion-tab title="Inicio" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong">
-			  </ion-tab>
 
-			  <!-- Chats Tab -->
-			  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes">
-			    <ion-view name="mensajes"></ion-view>
-			  </ion-tab>
 
-			  <!-- Account Tab -->
-			  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear">
-			    <ion-view name="descargas"></ion-view>
-			  </ion-tab>
-			</ion-tabs>
+
+
+
+
+
+
+
+
 
 	</ion-content>
 </ion-view>

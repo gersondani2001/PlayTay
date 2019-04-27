@@ -7,6 +7,8 @@
     messagingSenderId: "842696532825"
   };
   firebase.initializeApp(config);
+
+  var storage = firebase.storage();
  
 
 angular.module('starter.controllers', [])
@@ -46,7 +48,74 @@ angular.module('starter.controllers', [])
 })
 .controller("inicioS",function($scope){
   console.log("Entra inicio");
+
+  $scope.variableP;
+  $scope.cargar;
+
+
+   function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+    console.log(files[0].name);
+    $scope.variableP = files;
+    console.log($scope.variableP);
+    $scope.cargar = files[0].name;
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById('list').insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  
+  $scope.img = function(){
+
+    /*    var storageRef = storage.ref();
+    var file = files; // use the Blob or File API
+    ref.put(file).then(function(snapshot) {
+      console.log('Uploaded a blob or file!');
+    })*/
+
+    //console.log($scope.cargar);
+
+    var myImage = new Image();
+    myImage.src = $scope.cargar;
+    var cargarImagen = myImage
+
+    
+    var storage = firebase.storage();
+    var storageRef = storage.ref();
+    var file = cargarImagen; // use the Blob or File API
+    storageRef.put(file).then(function(snapshot) {
+      console.log('Uploaded a blob or file!');
+    })
+
+
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 })
+
+
+
 
 .controller("regist",function($scope,$state,$timeout){
 
